@@ -5,8 +5,8 @@ Welcome to My Project Documentation
    :maxdepth: 3
    :caption: Contents:
 
-   manual_func
-   manual_tech
+   overview
+   account
 
 Indices and tables
 ==================
