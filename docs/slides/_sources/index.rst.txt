@@ -4,9 +4,10 @@ Welcome to My Project Documentation
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
+   :glob:
 
    overview
-   account
+   account/*
 
 Indices and tables
 ==================

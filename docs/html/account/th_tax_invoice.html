@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Account: Thai Tax Invoice &mdash; Your Project Name  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Odoo กับบริบทไทย" href="../overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Your Project Name
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                13.0.1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Odoo กับบริบทไทย</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Account: Thai Tax Invoice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">ภาพรวม</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">โมดูลที่ใช้</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">การตั้งค่า</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1. ตั้งค่าสิทธิ์การใช้งานสำหรับระบบบัญชี</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vat-payment-undue-vat">2. ตั้งค่าระบบเพื่อให้รองรับ VAT ที่เกิดขึ้นที่ Payment (Undue VAT)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vat-undue-vat">3. ตั้งค่า VAT / Undue VAT ทั้งฝั่งซื้อและขาย</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">การใช้งาน</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">1. กระบวนการขาย</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2. การบวนการซื้อ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Your Project Name</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Account: Thai Tax Invoice</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/account/th_tax_invoice.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="account-thai-tax-invoice">
+<h1>Account: Thai Tax Invoice<a class="headerlink" href="#account-thai-tax-invoice" title="Permalink to this headline">¶</a></h1>
+<p>ภาษีมูลค่าเพิ่ม VAT</p>
+<div class="section" id="id1">
+<h2>ภาพรวม<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ภาษีมูลค่าเพิ่ม (Value Added Tax) หรือ VAT เป็นการเก็บภาษีจากการขายสินค้า หรือการให้บริการในแต่ละขั้นตอนการผลิต
+และจำหน่ายสินค้าหรือบริการ ทั้งที่ผลิต ภายในประเทศและนำเข้าจากต่างประเทศ…</p>
+<p>เมื่อมีการซื้อขายสินค้า จุดที่เกิด VAT ได้มี 2 ที่ คือ ที่ Invoice และที่ Payment ขึ้นอยู่กับประเภทสินค้า</p>
+<ol class="arabic simple">
+<li><p>Product :: สำหรับสินค้าที่ตรวจรับนับชิ้นได้ VAT เกิดขึ้นที่ Invoice (ตอนออกเอกสาร Invoice ให้ผู้รับสินค้า)</p></li>
+<li><p>Service :: สำหรับสินค้าประเภทบริการ VAT เกิดขึ้นที่ Payment (เมื่อบริการเสร็จ มีการจ่ายเงินและออกเอกสาร Payment)</p></li>
+</ol>
+<p>ธุรกรรมดังกล่าวที่เกิดขึ้น ระบบจะนำไปบันทึกบัญชี (Journal Entries) ตามการทำงานปกติของ Odoo ส่วนโมดูลเสริมจะช่วยบันทึกรายละเอียดของ
+Tax Invoice ไว้อีกตารางหนึ่งเพื่อความสะดวกในการสร้างรายงานภาษีซื้อและขายสำหรับส่งกรมสรรพากรต่อไป</p>
+<p>ในธุรกรรมหนึ่งๆ เลขที่เอกสารที่ใช้ออกรายงานภาษี (Tax Invoice Number) จะใช้เลขที่เอกสารจากผู้ขายเป็นเลขที่อ้างอิงเสมอ หากโยงเรื่องนี้กับระบบ ERP ซึ่งการทำงานจะมีเอกสารทั้งด้านขาย (Customer Invoice, Customer Payment) และด้านซื้อ (Vendor Bill, Vendor Payment) เลขที่อ้างอิง (Tax Invoice Number) ที่บันทึกในระบบจะเป็นแบบนี้</p>
+<ol class="arabic simple">
+<li><p>เราเป็นผู้ขาย :: Tax Invoice Number ออกจากระบบเรา คือ Customer Invoice (ขายสินค้า) หรือ Customer Payment (ขายบริการ)</p></li>
+<li><p>เราเป็นผู้ซื้อ :: Tax Invoice Number จะได้มาจากผู้ขาย (ผู้ขายจะให้อ้างเลขที่ใบกำกับภาษีใดมาเราก็จะใช้ตามนั้น) โดยจะได้รับมาตอนสร้างรายการ Vendor Bill (ซื้อสินค้า) หรือ Vendor Payment (ซื้อบริการ)</p></li>
+</ol>
+<p>ทั้งหมดนี้เป็นหลักการทั่วๆไปของไทย ส่วนถัดไปจะแสดงให้เห็นว่าใน Odoo ทำงานอย่างไร</p>
+</div>
+<div class="section" id="id2">
+<h2>โมดูลที่ใช้<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Odoo 13.0</strong></p>
+<ul class="simple">
+<li><p>account</p></li>
+<li><p><a class="reference external" href="https://odoo-community.org/shop/product/thai-localization-account-tax-invoice-5087">l10n_th_tax_invoice</a>
+โมดูลหลักในการบันทึกภาษีเข้ารายการ Tax Invoice เพื่อการออกรายงานภาษี</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>การตั้งค่า<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>ตั้งค่าสิทธิ์การใช้งานสำหรับระบบบัญชี</p></li>
+<li><p>ตั้งค่าระบบเพื่อให้รองรับ VAT ที่เกิดขึ้นที่ Payment (Undue VAT)</p></li>
+<li><p>ตั้งค่า VAT / Undue VAT ทั่งฝั่งซื้อและขาย</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>สร้าง database ด้วย</dt><dd><ul class="simple">
+<li><p>Odoo 13.0</p></li>
+<li><p>Country = Thailand เพื่อใช้งาน Chart of Account เบื้องต้น</p></li>
+<li><p>Language = English, Demo = False</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h3>1. ตั้งค่าสิทธิ์การใช้งานสำหรับระบบบัญชี<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>เพื่อให้ผู้ใช้งานสามารถเข้าไปตั้งค่าได้ User ต้องมีสิทธ์ดังนี้</p>
+<ul class="simple">
+<li><p>สำหรับ CE ให้เซตสิทธิ์ Show Full Accounting Feature</p></li>
+<li><p>สำหรับ EE ให้เซตสิทธิ์ Accounting = Advisor</p></li>
+</ul>
+</div>
+<div class="section" id="vat-payment-undue-vat">
+<h3>2. ตั้งค่าระบบเพื่อให้รองรับ VAT ที่เกิดขึ้นที่ Payment (Undue VAT)<a class="headerlink" href="#vat-payment-undue-vat" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/cash_basis.png" class="align-center" src="../_images/cash_basis.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ใน Odoo เรียกการบันทึก Tax ตอน Payment ว่า Cash Basis</p>
+</div>
+</div>
+<div class="section" id="vat-undue-vat">
+<h3>3. ตั้งค่า VAT / Undue VAT ทั้งฝั่งซื้อและขาย<a class="headerlink" href="#vat-undue-vat" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Output VAT 7%</p></li>
+<li><p>Undue Output VAT 7% (ภาษียังไม่ถึงกำหนดชำระ)</p></li>
+<li><p>Input VAT 7%</p></li>
+<li><p>Undue Input VAT 7% (ภาษียังไม่ถึงกำหนดชำระ)</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>Undue VAT ตั้งค่าเหมือนกับ VAT ทุกประการ (ใช้การ Copy มาได้) ยกเว้น</dt><dd><ul class="simple">
+<li><p>Tax Due = Based On Payment</p></li>
+<li><p>Cash Basis Transition Account = Undue VAT (Input/Output)</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../_images/undue_vat_setup.png" class="align-center" src="../_images/undue_vat_setup.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>การใช้งาน<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>กระบวนการขาย</p></li>
+<li><p>การบวนการซื้อ</p></li>
+</ol>
+<div class="section" id="id6">
+<h3>1. กระบวนการขาย<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>กรณี Output VAT, Tax Invoice จะเกิดขึ้นที่ Invoice</dt><dd><ul class="simple">
+<li><p>สร้างเอกสาร Customer Invoice เลือกรายการสินค้าและเลือก Output VAT 7%</p></li>
+<li><p>เนื่องจากการบันทึบัญชี Output VAT <strong>เกิดขึ้นที่ Invoice</strong> ระบบจะสร้าง Tax Invoice
+โดยใช้เลขที่ Customer Invoice จากระบบของเราเป็นเลขที่ Tax Invoice สำหรับออกรายงานภาษี</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../_images/sale_vat_on_invoice.png" class="align-center" src="../_images/sale_vat_on_invoice.png" />
+<dl class="simple">
+<dt>กรณี Undue Output VAT, Tax Invoice จะเกิดขึ้นที่ Payment</dt><dd><ul class="simple">
+<li><p>สร้างเอกสาร Customer Invoice เลือกรายการสินค้าและเลือก Undue Output VAT 7% และทำการจ่ายเงินตามปกติ</p></li>
+<li><p>ที่ Invoice จะบันทึก Undue Output VAT (ภาษียังไม่ถึงกำหนด) และล้างเข้าบันทึกบัญชี Output VAT ตอนจ่ายเงิน</p></li>
+<li><p>เนื่องจากการบันทึกบัญชี Output VAT <strong>เกิดขึ้นที่ Payment</strong> ระบบจะสร้าง Tax Invoice ที่ Customer Payment</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../_images/sale_vat_on_payment.png" class="align-center" src="../_images/sale_vat_on_payment.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>โดยการตั้งค่าเริ่มต้น ระบบจะใช้เลขที่ตามหน้าเอกสารซึ่งอาจเป็น Customer Invoice หรือ Customer Payment
+แต่ถ้าธุรกิจมีการขายทั้งสินค้า (VAT) และบริการ (Undue VAT) จะทำให้การรันเลขที่ Tax Invoice ไม่ต่อเนื่อง
+ในกรณีนี้เราสามารถสร้าง Sequence ใหม่โดยสัมพันธ์กับ Sales VAT ได้</p>
+<img alt="../_images/sale_vat_sequence.png" class="align-center" src="../_images/sale_vat_sequence.png" />
+<p>โดยระบบจะใช้เลขที่นี้ในการรันเลขที่ Tax Invoice แทนโดยไม่สนใจว่า VAT เกิดขึ้นที่ไหน</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>2. การบวนการซื้อ<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>กรณี Input VAT, Tax Invoice จะเกิดขึ้นที่ Invoice</dt><dd><ul class="simple">
+<li><p>สร้างเอกสาร Vendor Bill เลือกรายการสินค้าและเลือก Input VAT 7%</p></li>
+<li><p>เนื่องจากการบันทึบัญชี Input VAT <strong>เกิดขึ้นที่ Invoice</strong> ระบบจะสร้าง Tax Invoice ไว้แต่ไม่สามารถ Post
+ได้จนกว่าผู้ใช้จะกรอกเลขที่ Tax Invoice ที่ได้รับมาจากผู้ขาย ซึ่งจะเป็นเลขที่ใช้ในการออกรายงานภาษี</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../_images/purchase_vat_on_invoice.png" class="align-center" src="../_images/purchase_vat_on_invoice.png" />
+<dl class="simple">
+<dt>กรณี Undue Input VAT, Tax Invoice จะเกิดขึ้นที่ Payment</dt><dd><ul class="simple">
+<li><p>สร้างเอกสาร Vendor Bill เลือกรายการสินค้า และเลือก Undue Input VAT 7% และทำการจ่ายเงินตามปกติ</p></li>
+<li><p>ที่ Invoice จะบันทึก Undue Input VAT (ภาษียังไม่ถึงกำหนด) และล้างเข้าบันทึกบัญชี Input VAT ตอนจ่ายเงิน</p></li>
+<li><p>เนื่องจากการบันทึกบัญชี Input VAT <strong>เกิดขึ้นที่ Payment</strong> ระบบจะสร้าง Tax Invoice ที่ Vendor Payment</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../_images/purchase_vat_on_payment.png" class="align-center" src="../_images/purchase_vat_on_payment.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>กรณีของ Input VAT เลขที่ Tax Invoice จะได้รับจากผู้ขายเสมอ</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../overview.html" class="btn btn-neutral float-left" title="Odoo กับบริบทไทย" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Ecosoft Co., Ltd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
