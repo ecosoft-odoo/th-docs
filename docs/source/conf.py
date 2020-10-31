@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Thai Localization'
+project = 'Thailand Modules'
 author = 'Ecosoft Team'
 version = '13.0.1.0.1'
 copyright = '2020, Ecosoft Co., Ltd.'
