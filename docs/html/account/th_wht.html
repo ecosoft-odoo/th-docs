@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Account: Withholding Tax &mdash; Thai Localization  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Account: Thai Tax Invoice" href="th_tax_invoice.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Thai Localization
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                13.0.1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Odoo กับบริบทไทย</a></li>
+<li class="toctree-l1"><a class="reference internal" href="th_tax_invoice.html">Account: Thai Tax Invoice</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Account: Withholding Tax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">ภาพรวม</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">โมดูลที่ใช้</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">การตั้งค่า / สร้างเอกสารภาษีหัก ณ ที่จ่าย</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">ขั้นตอนการทำภาษีหัก ณ ที่จ่ายในระบบ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#payment">1. การทำภาษีหัก ณ ที่จ่ายที่หน้า Payment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#journal-entries">2. การทำภาษีหัก ณ ที่จ่ายที่หน้า Journal Entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#withholding-tax-cert">3. การออก Withholding Tax Cert ทดแทนใบเดิม</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4. การออกหนังสือรับรองการหักภาษี ณ ที่จ่าย (ใบ 50 ทวิ)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">5. การออกรายงานการหักภาษี ณ ที่จ่าย</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Thai Localization</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Account: Withholding Tax</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/account/th_wht.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="account-withholding-tax">
+<h1>Account: Withholding Tax<a class="headerlink" href="#account-withholding-tax" title="Permalink to this headline">¶</a></h1>
+<p>ภาษีหัก ณ ที่จ่าย</p>
+<div class="section" id="id1">
+<h2>ภาพรวม<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>ภาษีหัก ณ ที่จ่าย เป็นเงินภาษีที่ผู้จ่ายเงินจะหักออกจากเงินที่จะจ่ายให้กับผู้รับ โดยผู้จ่ายเงินมีหน้าที่นำเงินภาษีหัก ณ ที่จ่าย นำส่งให้กับสรรพากร
+ส่วนผู้รับเงินก็จะได้รับหนังสือรับรองการหัก ณ ที่จ่าย จากผู้จ่าย เพื่อเป็นหลักฐานในการยื่นแบบภาษีกับสรรพากรว่าได้ชำระภาษี ในรูปแบบของภาษีหัก ณ ที่จ่าย
+ที่ทยอยจ่ายไว้แล้วในระหว่างปีเป็นจำนวนเท่าไหร่นั่นเอง</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>โมดูลที่ใช้<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Odoo 13.0</strong></p>
+<p>โมดูลหลักในการทำภาษีหัก ณ ที่จ่าย
+ในระบบ odoo มาตรฐานจะมีการรองรับ withholding tax อยู่แล้ว แต่ไม่ครอบคลุมกับการทำภาษีหัก ณ ที่จ่ายของประเทศไทย
+ดังนั้นจึงต้องมีการติดตั้ง module เพิ่มเติม ซึ่ง module ที่จำเป็นในการออกภาษี ณ ที่จ่ายจะมีอยู่ 3 module ได้แก่</p>
+<p><a class="reference external" href="https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax">l10n_th_withholding_tax</a></p>
+<p><a class="reference external" href="https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_cert">l10n_th_withholding_tax_cert</a></p>
+<p><a class="reference external" href="https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_cert_form">l10n_th_withholding_tax_cert_Form</a></p>
+<p>ส่วนที่เหลือจะเป็นส่วนที่เพิ่มเติมขึ้นมา ใช้สำหรับบางกรณี อาจจะติดตั้งหรือไม่ก็ได้</p>
+<p><a class="reference external" href="https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_multi">l10n_th_withholding_tax_multi</a></p>
+<p><a class="reference external" href="https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_report">l10n_th_withholding_tax_report</a></p>
+</div>
+<div class="section" id="id3">
+<h2>การตั้งค่า / สร้างเอกสารภาษีหัก ณ ที่จ่าย<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ให้ติดตั้ง module Withholding Tax และ Withholding Tax Cert จาก source code ด้านบน
+เมื่อติดตั้งเสร็จสิ้น ระบบจะสามารถตั้งค่าเลือก Account ที่ต้องการให้เป็น Withholding Tax ได้ เผื่อกรณีที่ต้องการให้ระบบหักภาษี ณ ที่จ่ายแบบอัตโนมัติ
+โดยมีวิธีดังนี้ (Optional)</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Invoicing &gt; Configuration &gt; Accounting &gt; Chart of Accounts</p></li>
+<li><p>เลือก Account ที่ต้องการให้ทำเป็น Withholding Tax &gt; ติ๊กถูกที่ Field WT Account</p></li>
+</ol>
+<img alt="../_images/wht_coa.png" src="../_images/wht_coa.png" />
+<ol class="arabic simple" start="3">
+<li><p>ไปที่เมนู Invoicing &gt; Configuration &gt; Invoicing &gt; Withholding Tax</p></li>
+<li><p>สร้างเอกสารใหม่ แล้วกำหนดค่าต่าง ๆ ที่ต้องการหักภาษี &gt; Save</p></li>
+</ol>
+<img alt="../_images/wht_wht.png" src="../_images/wht_wht.png" />
+<ul class="simple">
+<li><p>Name : ชื่อที่จะแสดง</p></li>
+<li><p>Amount : ร้อยละที่ต้องการหักภาษี</p></li>
+<li><p>Withholding Tax Account : account ที่เป็น withholding tax เท่านั้น (กำหนดจากข้อ 2)</p></li>
+</ul>
+<p>ในกรณีที่ต้องการให้ระบบคำนวณภาษี เมื่อเลือกสินค้าที่ต้องการ สามารถตั้งค่าได้ดังนี้</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Invoicing &gt; Vendors &gt; Products</p></li>
+<li><p>เลือก Product ที่ต้องการหักภาษี ณ ที่จ่าย</p></li>
+<li><p>คลิก Purchase Tab &gt; เลือก Withholding Tax &gt; Save</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>หมายเหตุ : หากไม่เลือก WT Account ระบบไม่คำนวณการหักภาษี ณ ที่จ่ายให้อัตโนมัติ แต่สามารถให้ผู้ใช้งานเป็นคนกรอกข้อมูลในส่วนนี้ได้</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>ขั้นตอนการทำภาษีหัก ณ ที่จ่ายในระบบ<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>กระบวนการทำภาษีหัก ณ ที่จ่ายสามารถทำได้ที่หน้า Payment กับ Journal Entries (สร้างตรง)
+กรณีที่มีการทำภาษีหัก ณ ที่จ่ายมากกว่า 1 บรรทัดในเอกสาร 1 ใบ
+จะต้องติดตั้ง module Withholding Tax Multi เพื่อให้ระบบสามารถทำภาษีได้มากกว่า 1</p>
+<div class="section" id="payment">
+<h3>1. การทำภาษีหัก ณ ที่จ่ายที่หน้า Payment<a class="headerlink" href="#payment" title="Permalink to this headline">¶</a></h3>
+<p>สามารถให้ระบบคำนวณให้อัตโนมัติ หรือจะคำนวณเองก็ได้ ถ้าต้องการคำนวณเองไม่ต้องทำข้อ 3 และ 4  ซึ่งขั้นตอนการคำนวณภาษีที่หน้า Payment จะมีดังนี้</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Invoicing &gt; Vendors &gt; Bills</p></li>
+<li><p>สร้างเอกสารที่ทำการซื้อและมีภาษีหัก ณ ที่จ่าย</p></li>
+<li><p>คลิกที่ 3 จุดตรง Invoice Lines &gt; แสดง WT</p></li>
+</ol>
+<img alt="../_images/wht_vendor_bill.png" src="../_images/wht_vendor_bill.png" />
+<ol class="arabic" start="4">
+<li><p>เลือก WT ที่ต้องการจากการตั้งค่าก่อนหน้านี้ ในกรณีที่มีการตั้งค่า Withholding Tax ใน Product นั้น ระบบจะเลือก WT ให้อัตโนมัติ</p></li>
+<li><p>Save &gt; Post &gt; Register Payment</p></li>
+<li><p>ระบบจะคำนวณตัวเลขให้อัตโนมัติ ในกรณีที่คำนวณเองให้ใส่จำนวนหลังหักภาษีที่ช่อง Amount และส่วนต่างให้เลือก Account Withholding Tax</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>กรณีที่ Invoices มีภาษีหัก ณ ที่จ่ายตัวเดียว ระบบจะเลือก Mark invoice as fully paid</p></li>
+</ol>
+<img alt="../_images/wht_payment.png" src="../_images/wht_payment.png" />
+<p>2. กรณีที่ Invoices มีภาษีหัก ณ ที่จ่ายมากกว่า 1 และติดตั้ง module Withholding Tax Multi ระบบจะเลือก Mark invoice as fully paid
+(multi deduct)หากต้องการคำนวณเองแบบมี Withholding Tax มากกว่า 1 สามารถทำได้โดยการติดตั้ง module <a class="reference external" href="https://github.com/OCA/account-payment/tree/13.0/account_payment_multi_deduction">account_payment_multi_deduction</a>
+แทน module Withholding Tax Multi</p>
+<img alt="../_images/wht_multi.png" class="align-center" src="../_images/wht_multi.png" />
+<img alt="../_images/wht_payment_multi.png" class="align-center" src="../_images/wht_payment_multi.png" />
+</div></blockquote>
+</li>
+<li><p>Validate</p></li>
+<li><p>ไปที่เมนู Invoicing &gt; Vendors &gt; Payments &gt; เลือกเอกสารที่ทำรายการ</p></li>
+<li><p>คลิกปุ่ม Action &gt; Create Withholding Tax Cert.</p></li>
+</ol>
+<img alt="../_images/wht_create.png" src="../_images/wht_create.png" />
+<ol class="arabic simple" start="10">
+<li><p>ระบบจะเลือก Account Withholding Tax ให้อัตโนมัติ ในกรณีที่มีการตั้งค่าไว้ แต่ถ้าไม่มีผู้ใช้งานจะต้องเลือก Account เอง &gt; Create</p></li>
+<li><p>ระบบจะสร้างภาษีหัก ณ ที่จ่ายให้ แล้วให้ผู้ใช้งานกรอกข้อมูลในส่วนที่ต้องการให้ครบ</p></li>
+</ol>
+<img alt="../_images/wht_draft.png" src="../_images/wht_draft.png" />
+<ol class="arabic simple" start="12">
+<li><p>Save &gt; Done</p></li>
+</ol>
+</div>
+<div class="section" id="journal-entries">
+<h3>2. การทำภาษีหัก ณ ที่จ่ายที่หน้า Journal Entries<a class="headerlink" href="#journal-entries" title="Permalink to this headline">¶</a></h3>
+<p>ในบางครั้งอาจมีกรณีที่มีภาษีหัก ณ ที่จ่าย โดยที่ไม่ได้มาจาก Vendor Bills ก็สามารถทำได้ แต่ระบบจะไม่มีการคำนวณให้อัตโนมัติ โดยจะมีขั้นตอนดังนี้</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Invoicing &gt; Accounting &gt; Miscellaneous &gt; Journal Entries</p></li>
+<li><p>สร้าง / เลือก เอกสารที่มี Journal Type เป็น Miscellaneous เท่านั้น</p></li>
+<li><p>คลิกปุ่ม Action &gt; Create Withholding Tax Cert.</p></li>
+<li><p>เลือก Account Withholding Tax &gt; Create</p></li>
+<li><p>ระบบจะสร้างภาษีหัก ณ ที่จ่ายให้ แล้วให้ผู้ใช้งานกรอกข้อมูลในส่วนที่ต้องการให้ครบ</p></li>
+<li><p>Save &gt; Done</p></li>
+</ol>
+</div>
+<div class="section" id="withholding-tax-cert">
+<h3>3. การออก Withholding Tax Cert ทดแทนใบเดิม<a class="headerlink" href="#withholding-tax-cert" title="Permalink to this headline">¶</a></h3>
+<p>ระบบสามารถออก Withholding Tax Cert ใบใหม่ทดแทนเอกสารใบเดิมได้ โดยมีขั้นตอนดังนี้</p>
+<ol class="arabic simple">
+<li><p>สร้างเอกสารใหม่ที่ถูกต้องและทำ Withholding Tax แบบปกติ</p></li>
+<li><p>คลิกปุ่ม Action &gt; Create Withholding Tax Cert.</p></li>
+<li><p>เลือก Substitute &gt; เลือกเอกสาร Withholding Tax ใบที่ผิดพลาด โดยจะต้องมีสถานะเป็น Done เท่านั้น &gt; Create</p></li>
+</ol>
+<img alt="../_images/wht_substitute2.png" class="align-center" src="../_images/wht_substitute2.png" />
+<ol class="arabic simple" start="4">
+<li><p>ระบบจะสร้างภาษีหัก ณ ที่จ่ายให้ แล้วให้ผู้ใช้งานกรอกข้อมูลในส่วนที่ต้องการให้ครบ</p></li>
+<li><p>Save &gt; เมื่อคลิกปุ่ม Done ระบบจะไปยกเลิกเอกสารใบเก่าให้</p></li>
+</ol>
+<p>การเรียกดูเอกสาร Withholding Tax สามารถดูได้ที่เมนู Invoicing &gt; Vendors &gt; WT Certificates ซึ่งการทำที่หน้า Payment หรือ Journal Entries
+ในระบบจะออกเอกสารที่เดียวกัน</p>
+</div>
+<div class="section" id="id5">
+<h3>4. การออกหนังสือรับรองการหักภาษี ณ ที่จ่าย (ใบ 50 ทวิ)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>หลังจากทำภาษีหัก ณ ที่จ่ายในระบบเสร็จเรียบร้อยแล้ว จะต้องมีการยื่นหนังสือรับรองการหักภาษี ณ ที่จ่าย (ใบ 50 ทวิ) ให้กรมสรรพกร ซึ่งในระบบ Odoo
+จะใช้ฟอร์มมาตรฐานที่ทางสรรพกรกำหนด โดยมีขั้นตอนดังนี้</p>
+<ol class="arabic simple">
+<li><p>ติดตั้ง module Withholding Tax Cert Form จาก source code ด้านบน</p></li>
+<li><p>ไปที่เมนู Invoicing &gt; Vendors &gt; WT Certificates</p></li>
+<li><p>เลือกเอกสารที่ต้องการออกหนังสือรับรอง &gt; คลิกปุ่ม Print &gt; Withholding Cert (pdf)</p></li>
+</ol>
+<img alt="../_images/wht_cert.png" class="align-center" src="../_images/wht_cert.png" />
+<p>เมื่อ Print Withholding Tax Cert ที่มีสถานะยกเลิก (State ‘Cancelled’) ระบบจะแสดงข้อความ “ยกเลิก” คาดกลางเอกสาร</p>
+<img alt="../_images/wht_cancelled.png" class="align-center" src="../_images/wht_cancelled.png" />
+<p>เมื่อ Print Withholding Tax Cert ที่เป็นใบทดแทนใบเดิมจะมีข้อความด้านบนขวากำกับว่า “ออกแทนเอกสารเลขที่ ……………’</p>
+<img alt="../_images/wht_substitute.png" class="align-center" src="../_images/wht_substitute.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>หมายเหตุ : ข้อที่ให้ระบุข้อความ สามารถใส่ได้ที่ Income Description</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>5. การออกรายงานการหักภาษี ณ ที่จ่าย<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>สำหรับผู้บริหาร หรือนักบัญชีที่ต้องการดูรายละเอียดการทำรายการภาษีหัก ณ ที่จ่าย สามารถทำได้โดยมีขั้นตอนดังนี้</p>
+<ol class="arabic simple">
+<li><p>ติดตั้ง module Withholding Tax Report จาก source code ด้านบน</p></li>
+<li><p>ไปที่เมนู Invocing &gt; Reporting &gt; WT Income Tax Report</p></li>
+<li><p>เลือกประเภทเอกสารที่ต้องการดู (ปัจจุบันรองรับเฉพาะ PND3, PND53 เท่านั้น) และช่วงเวลา</p></li>
+<li><p>เลือกประเภทรายงานที่ต้องการ โดยจะมีอยู่ 4 ประเภทคือ</p></li>
+</ol>
+<img alt="../_images/wht_report.png" class="align-center" src="../_images/wht_report.png" />
+<ul class="simple">
+<li><p>View : แสดงข้อมูลในระบบ Odoo</p></li>
+<li><p>Export PDF : แสดงข้อมูลเป็นไฟล์ PDF</p></li>
+<li><p>Export XLSX : แสดงข้อมูลเป็นไฟล์ XLSX</p></li>
+<li><p>Export TXT : แสดงข้อมูลเป็นไฟล์ TEXT</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>หมายเหตุ : รายงานที่เป็น Text File ในส่วนของ ที่อยู่ จะออกตามการตั้งค่าในระบบ โดยสามารถแก้ไขได้ที่เมนู Contacts &gt; Configuration
+&gt; Localization &gt; Countries &gt; Layout in Reports</p>
+</div>
+<img alt="../_images/wht_format.png" class="align-center" src="../_images/wht_format.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="th_tax_invoice.html" class="btn btn-neutral float-left" title="Account: Thai Tax Invoice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Ecosoft Co., Ltd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
