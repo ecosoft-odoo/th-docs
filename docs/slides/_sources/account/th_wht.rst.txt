@@ -20,19 +20,19 @@ Account: Withholding Tax
 ดังนั้นจึงต้องมีการติดตั้ง module เพิ่มเติม ซึ่ง module ที่จำเป็นในการออกภาษี ณ ที่จ่ายจะมีอยู่ 3 module ได้แก่
 
 
-*`l10n_th_withholding_tax <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax>`_
+* `l10n_th_withholding_tax <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax>`_
 
-*`l10n_th_withholding_tax_cert <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_cert>`_
+* `l10n_th_withholding_tax_cert <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_cert>`_
 
-*`l10n_th_withholding_tax_cert_Form <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_cert_form>`_
+* `l10n_th_withholding_tax_cert_Form <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_cert_form>`_
 
 
 ส่วนที่เหลือจะเป็นส่วนที่เพิ่มเติมขึ้นมา ใช้สำหรับบางกรณี อาจจะติดตั้งหรือไม่ก็ได้
 
 
-*`l10n_th_withholding_tax_multi <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_multi>`_
+* `l10n_th_withholding_tax_multi <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_multi>`_
 
-*`l10n_th_withholding_tax_report <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_report>`_
+* `l10n_th_withholding_tax_report <https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_withholding_tax_report>`_
 
 
 .. nextslide::
@@ -54,6 +54,7 @@ Account: Withholding Tax
 4. สร้างเอกสารใหม่ แล้วกำหนดค่าต่าง ๆ ที่ต้องการหักภาษี > Save
 
 .. image:: images/wht_wht.png
+
 - Name : ชื่อที่จะแสดง
 - Amount : ร้อยละที่ต้องการหักภาษี
 - Withholding Tax Account : account ที่เป็น withholding tax เท่านั้น (กำหนดจากข้อ 2)

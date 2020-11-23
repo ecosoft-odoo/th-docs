@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Account: Thai Tax Report &mdash; Thailand Modules  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Account: Withholding Tax" href="th_wht.html" />
+    <link rel="prev" title="Account: Thai Tax Invoice" href="th_tax_invoice.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Thailand Modules
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                13.0.1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Odoo กับบริบทไทย</a></li>
+<li class="toctree-l1"><a class="reference internal" href="th_tax_invoice.html">Account: Thai Tax Invoice</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Account: Thai Tax Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">โมดูลที่ใช้</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tax-report">การดูรายงาน Tax Report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">ตัวอย่างรายงานที่ได้</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="th_wht.html">Account: Withholding Tax</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Thailand Modules</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Account: Thai Tax Report</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/account/th_tax_report.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="account-thai-tax-report">
+<h1>Account: Thai Tax Report<a class="headerlink" href="#account-thai-tax-report" title="Permalink to this headline">¶</a></h1>
+<p>l10n_th_tax_report เป็นโมดูลที่สามารถออกรายงานภาษีขายและภาษีซื้อ เพื่อช่วยในการทำรายงานภาษีมูลค่าเพิ่ม สามารถใช้งานได้โดย</p>
+<div class="section" id="id1">
+<h2>โมดูลที่ใช้<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><strong>Odoo 13.0</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://odoo-community.org/shop/product/thai-localization-account-tax-invoice-5087">l10n_th_tax_invoice</a></dt><dd><p>โมดูลหลักในการบันทึกภาษีเข้ารายการ Tax Invoice</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://github.com/OCA/l10n-thailand/tree/13.0/l10n_th_tax_report">l10n_th_tax_report</a></dt><dd><p>เป็นโมดูลที่ใช้สำหรับดูรายงานทางภาษี</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="tax-report">
+<h2>การดูรายงาน Tax Report<a class="headerlink" href="#tax-report" title="Permalink to this headline">¶</a></h2>
+<p>การทำรายงานภาษีมูลค่าเพิ่ม สามารถเรียกดูได้ตามขั้นตอน ดังนี้</p>
+<ol class="arabic simple">
+<li><p>เข้าไปที่ Invoicing &gt; Reporting &gt; Thai Tax Report</p></li>
+</ol>
+<img alt="../_images/1.png" src="../_images/1.png" />
+<ol class="arabic simple" start="2">
+<li><p>เลือกประเภทภาษี และช่วงเวลาที่ต้องการออกรายงาน</p></li>
+</ol>
+<img alt="../_images/2.png" src="../_images/2.png" />
+<ol class="arabic simple" start="3">
+<li><p>เลือกรูปแบบรายงานที่ต้องการ</p></li>
+</ol>
+<div class="section" id="id2">
+<h3>ตัวอย่างรายงานที่ได้<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/3.png" src="../_images/3.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="th_wht.html" class="btn btn-neutral float-right" title="Account: Withholding Tax" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="th_tax_invoice.html" class="btn btn-neutral float-left" title="Account: Thai Tax Invoice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Ecosoft Co., Ltd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
