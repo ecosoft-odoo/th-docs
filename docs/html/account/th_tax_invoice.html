@@ -103,7 +103,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#id7">2. การบวนการซื้อ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tax-invoice">หน้าต่าง Tax Invoice</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="th_tax_report.html">Account: Thai Tax Report</a></li>
@@ -284,6 +283,14 @@ Tax Invoice ไว้อีกตารางหนึ่งเพื่อค�
 </dd>
 </dl>
 <img alt="../_images/sale_vat_on_payment.png" class="align-center" src="../_images/sale_vat_on_payment.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<img alt="../_images/sale_vat_sequence.png" class="align-center" src="../_images/sale_vat_sequence.png" />
+<p>โดยการตั้งค่าเริ่มต้น ระบบจะใช้เลขที่ตามหน้าเอกสารซึ่งอาจเป็น Customer Invoice หรือ Customer Payment
+แต่ถ้าธุรกิจมีการขายทั้งสินค้า (VAT) และบริการ (Undue VAT) จะทำให้การรันเลขที่ Tax Invoice ไม่ต่อเนื่อง
+ในกรณีนี้เราสามารถสร้าง Sequence ใหม่โดยสัมพันธ์กับ Sales VAT ได้
+โดยระบบจะใช้เลขที่นี้ในการรันเลขที่ Tax Invoice แทนโดยไม่สนใจว่า VAT เกิดขึ้นที่ไหน</p>
+</div>
 </div>
 <div class="section" id="id7">
 <h3>2. การบวนการซื้อ<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
@@ -310,9 +317,6 @@ Tax Invoice ไว้อีกตารางหนึ่งเพื่อค�
 <p>กรณีของ Input VAT เลขที่ Tax Invoice จะได้รับจากผู้ขายเสมอ</p>
 </div>
 </div>
-</div>
-<div class="section" id="tax-invoice">
-<h2>หน้าต่าง Tax Invoice<a class="headerlink" href="#tax-invoice" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
